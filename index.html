@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page-container {
+            padding: 32px 140px;
+        }
+
+        .font {
+            color: rgb(35, 34, 41);
+            font-family: Goldman;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 180%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-title {
+            color: rgb(35, 34, 41);
+            font-family: Goldman;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 180%;
+            letter-spacing: 0%;
+            text-align: left;
+            flex:2;
+        }
+
+        .nav-actions {
+            display: flex;
+            flex:3;
+            justify-content: space-between;
+            gap: 4rem;
+            display: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 5;
+        }
+
+        .link {
+            color: rgb(0, 0, 0);
+            font-family: Gilroy;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            height: fit-content;
+        }
+
+        .bold {
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+        }
+
+        .cart-actions {
+            display: flex;
+            border: 1px solid;
+        }
+
+        .sub-navbar {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .search-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            width: max-content;
+            border-radius: 5px;
+        }
+
+        .search-input input {
+            min-width: 60%;
+            border: none;
+            min-height: 3rem;
+            min-width: 15rem;
+        } 
+
+        .sub-navbar .instagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .sub-navbar .instagram .divider {
+            height: 0px;
+            width: 10rem;
+            border: 1px solid;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .main .left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+        }
+
+        .main .left-section .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .left-section .main-text {
+            font-size: 52px;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            display: inline-block;
+            width: max-content;
+            margin: 0;
+        }
+
+        .main .left-section .cta-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cta-container .cta-btn {
+            padding: 16px;
+            font-family: Gilroy;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .cta-container .cta-btn.primary {
+            background: rgb(35, 34, 41);
+            color: rgb(255, 251, 247);
+            -webkit-box-shadow: 7px 6px 0px 0px rgba(231,166,26,1);
+            -moz-box-shadow: 7px 6px 0px 0px rgba(231,166,26,1);
+            box-shadow: 7px 6px 0px 0px rgba(231,166,26,1);
+        }
+
+        .cta-container .cta-btn.secondary {
+            background: rgb(255, 251, 247);
+            color: rgb(34, 35, 41);
+        }
+
+        .hero-image {
+            height: 80%;
+        }
+
+        .right-section {
+            position: relative;
+        }
+
+        .secondary-content-section {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .secondary-content-section .card {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .secondary-content-section .card p {
+            font-size: 24px;
+        }
+
+        .secondary-content-section .text {
+            color: rgb(35, 34, 41);
+            font-family: Gilroy;
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .secondary-content-section .text-container {
+            display: flex;
+            align-items: center;
+        }
+        @media only screen and (min-width: 800px) {
+            .hidden-desktop {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .page-container {
+                padding: 32px 30px;
+            }
+
+            .nav-title {
+                font-size: 24px;
+            }
+
+            .hidden-mobile {
+                display: none;
+            }
+
+            .nav-cta {
+                justify-content: flex-end;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .hero-image {
+                height: auto;
+                width: 100%;
+            }
+
+            .secondary-content-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <section class="nav-bar">
+            <div class="nav-title">Aeezah.</div>
+            <div class="nav-actions">
+                <div class="nav-links hidden-mobile">
+                    <a href="/" class="link bold"><span>New Arrivals</span></a>
+                    <a href="/" class="link"><span>Shop</span></a>
+                    <a href="/" class="link"><span>Beauty</span></a>
+                    <a href="/" class="link"><span>Sale</span></a>
+                    <a href="/" class="link"><span>Journal</span></a>
+                </div>
+                <div class="nav-cta">
+                    <div class="cart-actions">
+                        <button class="nav-btn"><img src="./assets/cart.png" alt="cart"></button>
+                        <button class="nav-btn bold hidden-mobile">0</button>
+                    </div>
+                    <div>
+                        <button class="nav-btn hidden-mobile">
+                            <img src="./assets/user.png" alt="user">
+                        </button>
+                        <button class="nav-btn bold hidden-desktop"><img src="./assets/menu.png" alt="menu"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-top: 3rem; margin-bottom: 3rem;"/>
+        <section class="sub-navbar hidden-mobile">
+            <div class="search-input">
+                <input type="text" placeholder="Search videos, people and more">
+                <img src="./assets/search.png" alt="search">
+            </div>
+            <div class="instagram">
+                <p>INSTAGRAM</p>
+                <div class="divider"></div>
+                <img src="./assets/instagram.png" alt="instagram">
+            </div>
+        </section>
+        <section class="main hidden-mobile">
+            <div class="left-section">
+                <div class="text-container">
+                    <p class="main-text">FABRIC THAT</p>
+                    <p class="main-text" style="border-top: none;">SPEAKS</p>
+                </div>
+                
+                <div class="cta-container">
+                    <button class="cta-btn primary">View All</button>
+                    <button class="cta-btn secondary">Watch Now</button>
+                </div>
+            </div>
+            <div class="right-section">
+                    <img class="hero-image" src="./assets/model1.png" alt="">
+            </div>
+        </section>
+        <section class="main hidden-desktop">
+            <div class="left-section">
+                <div class="text-container">
+                    <p class="main-text">FABRIC THAT</p>
+                    <p class="main-text" style="border-top: none;">SPEAKS</p>
+                </div>
+                <div class="right-section">
+                    <img class="hero-image" src="./assets/model1.png" alt="">
+                </div>
+                <div class="cta-container">
+                    <button class="cta-btn primary">View All</button>
+                    <button class="cta-btn secondary">Watch Now</button>
+                </div>  
+                </div>          
+        </section>
+        <section class="secondary-content-section">
+            <div class="card">
+                <p class="bold">Shirts</p>
+                <img class="hero-image" src="./assets/model2.png" alt="model2">
+            </div>
+            <div class="card">
+                <p class="bold">Hoodies</p>
+                <img class="hero-image" src="./assets/model3.png" alt="model2">
+            </div>
+            <div class="text-container">
+                <p class="text"><span style="color: aqua;">"</span>Fashion is not about clothes, It is about a look<span style="color: aqua;">"</span></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
